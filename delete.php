@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
     $stmt->execute([$_GET['id']]);
     $poll = $stmt->fetch(PDO::FETCH_ASSOC);
     if (!$poll) {
-        die ('Poll doesn\'t exist with that ID!');
+        die ('Não existe nenhuma enquete com esse ID');
     }
     // Certifica de que o usuário confirme antes da exclusão
     if (isset($_GET['confirm'])) {
@@ -29,7 +29,7 @@ if (isset($_GET['id'])) {
         }
     }
 } else {
-    die ('Id não identificado!');
+    die ('ID não identificado!');
 }
 ?>
 

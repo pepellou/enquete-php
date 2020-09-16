@@ -34,7 +34,7 @@ function template_header($title) {
     EOT;
 }
 
-    // Template footer
+    // fotter footer
 function template_footer() {
     echo <<<EOT
         </body>

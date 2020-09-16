@@ -34,17 +34,17 @@ if (!empty($_POST)) {
 
 <div class="content update">
 	<h2>Criando um quiz...</h2>
-    <form action="create.php" method="post">
+    <form action="create.php" method="post" class="create">
         <label for="title">Título</label>
-        <input type="text" name="title" id="title">
+        <input type="text" name="title" id="title" required>
         <label for="desc">Descrição</label>
-        <input type="text" name="desc" id="desc">
+        <input type="text" name="desc" id="desc" required>
         <label for="initial">Data de inicio</label>
-        <input type="date" id="initial" name="initial">
+        <input type="date" id="initial" name="initial" required> 
         <label for="initial">Data de finalização</label>
-        <input type="date" id="finish" name="finish">
-        <label for="answers">Respostas (separe por linhas)</label>
-        <textarea name="answers" id="answers"></textarea>
+        <input type="date" id="finish" name="finish" required>
+        <label for="answers" >Respostas (separe por linhas)</label>
+        <textarea name="answers" id="answers" required></textarea>
         <input type="submit" value="Criar ">
     </form>
     <?php if ($msg): ?>

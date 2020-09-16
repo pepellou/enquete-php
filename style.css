@@ -49,6 +49,7 @@ body {
     width: 1000px;
     margin: 0 auto;
 }
+
 .content h2 {
     margin: 0;
     padding: 25px 0;
@@ -211,9 +212,6 @@ body {
     cursor: pointer;
     width: 150px;
     margin-top: 15px;
-}
-.poll-vote form input[type="submit"]:hover, .poll-vote form a:hover {
-    background-color: #32a367;
 }
 .poll-vote form a {
     text-align: center;

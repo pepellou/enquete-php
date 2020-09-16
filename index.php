@@ -18,7 +18,9 @@ $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <tr>
                 <td>#</td>
                 <td>Título</td>
-				<td>Respostas</td>
+                <td>Respostas</td>
+                <td>Status</td>
+
                 <td></td>
             </tr>
         </thead>
@@ -27,10 +29,22 @@ $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <tr>
                 <td><?=$poll['id']?></td>
                 <td><?=$poll['title']?></td>
-				<td><?=$poll['answers']?></td>
+                <td><?=$poll['answers']?></td>
+                <td>
+                <?php
+                    $date = strtotime($poll['finish']);
+                    $nowDate = strtotime("now");
+                    if ($date<$nowDate){
+                        echo 'Finalizada';
+                    } elseif ($date>$nowDate){
+                       echo 'Em andamento';
+                    }
+                ?>
+                </td>
+
                 <td class="actions">
 					<a href="vote.php?id=<?=$poll['id']?>" class="view" title="Visualizar"><i class="fas fa-eye fa-xs"></i></a>
-                    <a href="" class="view" title="Editar"><i class="fas fa-edit fa-xs"></i></a>
+                    <a href="edit.php?id=<?=$poll['id']?>" class="view" title="Editar"><i class="fas fa-edit fa-xs"></i></a>
                     <a href="delete.php?id=<?=$poll['id']?>" class="trash" title="Deletar"><i class="fas fa-trash fa-xs"></i></a>
                 </td>
             </tr>

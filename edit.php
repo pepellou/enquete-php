@@ -39,7 +39,7 @@ if (!empty($_POST)) {
             }
             ?>
         </textarea>
-        <input type="submit" value="Editar ">
+        <input type="submit" value="Editar" disabled>
     </form>
 </div>
 

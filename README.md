@@ -9,4 +9,5 @@
 3. abra o projeto no navegador, ele irá redirecionar direto para o index.
 
 ### TODO
+ - Realtime nas votações;
  - Edição de enquete;

@@ -42,8 +42,8 @@ if (isset($_GET['id'])) {
     <?php else: ?>
 	<p>Você tem certeza que deseja apagar o #<?=$poll['id']?>?</p>
     <div class="yesno">
-        <a href="delete.php?id=<?=$poll['id']?>&confirm=yes">Yes</a>
-        <a href="delete.php?id=<?=$poll['id']?>&confirm=no">No</a>
+        <a href="delete.php?id=<?=$poll['id']?>&confirm=yes">Sim</a>
+        <a href="delete.php?id=<?=$poll['id']?>&confirm=no">Não</a>
     </div>
     <?php endif; ?>
 </div>

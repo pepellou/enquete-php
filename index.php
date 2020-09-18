@@ -20,7 +20,6 @@ $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td>Título</td>
                 <td>Respostas</td>
                 <td>Status</td>
-
                 <td></td>
             </tr>
         </thead>
@@ -31,6 +30,7 @@ $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td><?=$poll['title']?></td>
                 <td><?=$poll['answers']?></td>
                 <td>
+                    <!--nota: achei que tivesse mais sentido usar apenas em andamento, e finalizada-->
                 <?php
                     $date = strtotime($poll['finish']);
                     $nowDate = strtotime("now");

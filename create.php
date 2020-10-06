@@ -19,6 +19,7 @@ if (!empty($_POST)) {
     // Obtenha as respostas e converta a string multilinha em um array, para que possamos adicionar cada resposta à tabela "poll_answers"
     $answers = isset($_POST['answers']) ? explode(PHP_EOL, $_POST['answers']) : '';
     foreach ($answers as $answer) {
+	$answer = trim($answer);
         //Se a resposta estiver vazia, não há necessidade de inserir
         if (empty($answer)) continue;
         // Adicionando questionário a tabela poll_awnwers

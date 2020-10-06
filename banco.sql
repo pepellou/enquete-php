@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `polls` (
 	`title` text NOT NULL,
 	`desc` text NOT NULL,
     `initial` date NOT NULL,
-    `finish` date NOT NULL
+    `finish` date NOT NULL,
 	PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
